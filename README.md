@@ -41,7 +41,7 @@ word-definition --help
 ![image info](./doc/img/working.png)
 
 #### Running a search without using arguments, it will return a usage menu.
-![image info](./doc/img/working.png)
+![image info](./doc/img/usage.png)
 
 Happy search 😎
 
