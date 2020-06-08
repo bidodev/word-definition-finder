@@ -4,7 +4,6 @@
 
 #### The dictionary give the definition of any given word. 
 
-
 ### Getting Started
 
 #### 1. Installing everything...
@@ -23,7 +22,6 @@ module.exports = credentials;
 
 >> If you dont have an KEY You can get an one here: https://developer.oxforddictionaries.com/
 
-
 #### 3. Deploy **Word Finder** 
 
 ```
@@ -37,6 +35,13 @@ word-definition -w happy
 word-definition --word happy
 word-definition --help
 ```
+
+### Screenshots
+> Running a search using the word **happy** 
+![image info](./doc/img/working.png)
+
+> Running a search without using arguments, it will return a usage menu.
+![image info](./doc/img/working.png)
 
 Happy search 😎
 
