@@ -12,6 +12,7 @@ class Search {
   }
 
   //method to resolve the url
+  //default endpoint by now, but if we want to continue in the future it's easily scalable 
   buildURL(endpoint = 'entries') {
     const URL =
       url.resolve(this.url, endpoint) + `/${this.language}` + `/${this.word}`;
