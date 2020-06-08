@@ -7,7 +7,7 @@ const { argv } = require('yargs')
   .scriptName('word-definition')
   .usage('Usage: $0 -w anyword')
   .example('$0 -w happy')
-  .example('$0 -word happy')
+  .example('$0 --word happy')
   .option('w', {
     alias: 'word',
     describe: 'A word to search',
