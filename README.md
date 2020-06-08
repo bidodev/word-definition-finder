@@ -12,9 +12,7 @@
 npm install
 ```
 #### 2. Create a config.js
-> In the same folder of package.json you need a config.js with those informations
->> You can get an API key here: https://developer.oxforddictionaries.com/
-
+> In the same folder of package.json you need a config.js like this
 ```javascript
 const credentials = {
      id : '********',
@@ -23,14 +21,17 @@ const credentials = {
 module.exports = credentials;
 ```
 
-#### 2. Deploy **Word Finder** 
+>> If you dont have an KEY You can get an one here: https://developer.oxforddictionaries.com/
+
+
+#### 3. Deploy **Word Finder** 
 
 ```
 npm run deploy
 ```
 > It might ask for super user permission, if so please use sudo npm run deploy
 
-#### 3. Usage
+#### 4. Usage
 ```
 word-definition -w happy
 word-definition --word happy
