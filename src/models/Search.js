@@ -5,7 +5,7 @@ const url = require('url');
 const { id, key } = require('../../config');
 
 class Search {
-  constructor(query, language = 'en-us') {
+  constructor(query, language) {
     this.word = query;
     this.language = language;
     this.url = 'https://od-api.oxforddictionaries.com/api/v2/';
@@ -13,7 +13,7 @@ class Search {
 
   //method to resolve the url
   //default endpoint by now, but if we want to continue in the future it's easily scalable 
-  buildURL(endpoint = 'entries') {
+  buildURL(endpoint) {
     const URL =
       url.resolve(this.url, endpoint) + `/${this.language}` + `/${this.word}`;
 
