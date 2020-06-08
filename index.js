@@ -1,8 +1,5 @@
- //import credentials
- const {id, key} = require('./config');
-
-// const Search = require('./models/Search');
-const axios = require('axios');
+//imports
+const Search = require('./models/Search');
 
 //1. Get the word from the user
 const args = process.argv.slice(2);
@@ -12,45 +9,26 @@ const query = args[0];
 if (!query || query.includes('--help')) {
   console.log('Show help..');
 } else {
-  //1. Make a new search send the query..
+  //2. Make a new API call and send the request and API_KEY
+  const search = new Search(query);
+  search
+    .buildURL()
+    .then((res) => {
+      const { results } = res;
 
-  const endpoint = 'entries';
-  const language_code = 'en-us';
-  const word_id = `${query}`;
-
-  const headers = {
-    headers: {
-      'app_id': id, 'app_key': key
-    },
-}
-  url =
-    'https://od-api.oxforddictionaries.com/api/v2/' +
-    endpoint +
-    '/' +
-    language_code +
-    '/' +
-    word_id.toLowerCase();
-
-  const res = axios.get(url, headers);
-  res.then(res => {
-    const {results} = res.data;
-  
-    results.forEach(result => {
-        result.lexicalEntries.forEach(res =>{
-          const {entries, language} = res;
-        })
-    });
-
-    entries.forEach(entrie => {
-      const {pronunciations, senses} = entrie;
-
-      senses.forEach(element => {
-        console.log(element.shortDefinitions)
+      results.forEach((result) => {
+        result.lexicalEntries.forEach((res) => {
+          return ({ entries, language } = res);
+        });
       });
-    });
 
+      entries.forEach((entrie) => {
+        const { pronunciations, senses } = entrie;
 
-  }).catch(err => console.log(err.message))
-  
+        senses.forEach((element) => {
+          console.log(element.shortDefinitions);
+        });
+      });
+    })
+    .catch((err) => console.log(err.message));
 }
-//2. Make a new API call and send the request and API_KEY
