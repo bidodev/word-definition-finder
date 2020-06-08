@@ -1,16 +1,26 @@
 
-### Commands
+### Getting Started
 
-Deploy **Word Finder** 
+1. Installing everything ;)
+```
+npm install
+```
+
+2. Deploy **Word Finder** 
 
 ```
 npm run deploy
 ```
 > it might ask for super user permission, if so please use sudo npm run deploy
 
-#### Usage Example
+3. Testing
 ```
 word-definition -w happy
+```
+
+4. Asking for help
+```
+word-definition --help
 ```
 
 ### OxFord Dictionary 

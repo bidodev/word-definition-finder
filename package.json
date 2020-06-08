@@ -1,7 +1,7 @@
 {
   "name": "oxford-bidodev-1",
   "version": "1.0.0",
-  "description": "Create a program which uses the Oxford Dictionary API. The dictionary should give the definition of any given word.",
+  "description": "Oxford Dictionary API. The dictionary give the definition of any given word.",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
