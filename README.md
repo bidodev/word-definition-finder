@@ -20,14 +20,14 @@ const credentials = {
 module.exports = credentials;
 ```
 
->> If you dont have an KEY You can get an one here: https://developer.oxforddictionaries.com/
+- If you dont have an KEY You can get an one here: https://developer.oxforddictionaries.com/
 
 #### 3. Deploy **Word Finder** 
 
 ```
 npm run deploy
 ```
-> It might ask for super user permission, if so please use sudo npm run deploy
+> It might ask for super user permission, if so please use **sudo npm run deploy**
 
 #### 4. Usage
 ```
@@ -37,10 +37,10 @@ word-definition --help
 ```
 
 ### Screenshots
-> Running a search using the word **happy** 
+#### Running a search using the word **happy** 
 ![image info](./doc/img/working.png)
 
-> Running a search without using arguments, it will return a usage menu.
+#### Running a search without using arguments, it will return a usage menu.
 ![image info](./doc/img/working.png)
 
 Happy search 😎
