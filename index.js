@@ -32,7 +32,26 @@ if (!query || query.includes('--help')) {
     word_id.toLowerCase();
 
   const res = axios.get(url, headers);
-  res.then(data => {console.log(data)}).catch(err => console.log(err.message))
+  res.then(res => {
+    const {results} = res.data;
+  
+    results.forEach(result => {
+        result.lexicalEntries.forEach(res =>{
+          this.res = res;
+        })
+    });
+
+    const {entries, language} = this.res;
+    
+    entries.forEach(entrie => {
+      const {pronunciations, senses} = entrie;
+      senses.forEach(element => {
+        console.log(element.shortDefinitions)
+      });
+    });
+
+
+  }).catch(err => console.log(err.message))
   
 }
 //2. Make a new API call and send the request and API_KEY
