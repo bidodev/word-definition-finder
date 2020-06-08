@@ -1,16 +1,26 @@
-const word = require('./views/word')
-const help = require('./views/help')
+#!/usr/bin/env node
+const wordDefinition = require('./views/word');
 
-//1. Get the word from the user
-const args = process.argv.slice(2);
-const query = args[0];
+//source learning
+//https://markoskon.com/yargs-examples/
+const { argv } = require('yargs')
+  .scriptName('word-definition')
+  .usage('Usage: $0 -w anyword')
+  .example('$0 -w happy')
+  .example('$0 -word happy')
+  .option('w', {
+    alias: 'word',
+    describe: 'A word to search',
+    demandOption: 'The word is required.',
+    type: 'string',
+    nargs: 1,
+  })
+  .describe('help', 'Show help.') // Override --help usage message.
+  .describe('version', 'Show version number.') // Override --version usage message.
+  .epilog('Copyright 2020');
 
+//get the word
+const { word } = argv;
 
-//if the user does not insert a word or ask for help..
-if (!query || query.includes('--help')) {
-  help()
-} 
-//otherwise we send a new request with the word
-else {
-  word(query);
-}
+//finally we call our lib
+wordDefinition(word);

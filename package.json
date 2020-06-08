@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/FBw-26/oxford-bidodev-1#readme",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "yargs": "^15.3.1"
   }
 }
