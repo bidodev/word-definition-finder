@@ -1,0 +1,9 @@
+#Ignore Node Modules
+node_modules/
+
+#Ignore all configs
+config.*
+
+#Others
+.prettierrc
+.eslintrc.json

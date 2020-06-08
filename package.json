@@ -1,0 +1,22 @@
+{
+  "name": "oxford-bidodev-1",
+  "version": "1.0.0",
+  "description": "Create a program which uses the Oxford Dictionary API. The dictionary should give the definition of any given word.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FBw-26/oxford-bidodev-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FBw-26/oxford-bidodev-1/issues"
+  },
+  "homepage": "https://github.com/FBw-26/oxford-bidodev-1#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
