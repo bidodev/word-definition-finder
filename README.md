@@ -1,4 +1,18 @@
 
+### Commands
+
+Deploy **Word Finder** 
+
+```
+npm run deploy
+```
+> it might ask for super user permission, if so please use sudo npm run deploy
+
+#### Usage Example
+```
+word-definition -w happy
+```
+
 ### OxFord Dictionary 
 
 Create a program which uses the Oxford Dictionary API. The dictionary should give the definition of any given word. 
