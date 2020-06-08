@@ -37,14 +37,13 @@ if (!query || query.includes('--help')) {
   
     results.forEach(result => {
         result.lexicalEntries.forEach(res =>{
-          this.res = res;
+          const {entries, language} = res;
         })
     });
 
-    const {entries, language} = this.res;
-    
     entries.forEach(entrie => {
       const {pronunciations, senses} = entrie;
+
       senses.forEach(element => {
         console.log(element.shortDefinitions)
       });
