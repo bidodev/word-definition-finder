@@ -11,6 +11,17 @@
 ```
 npm install
 ```
+#### 2. Create a config.js
+> In the same folder of package.json you need a config.js with those informations
+>> You can get an API key here: https://developer.oxforddictionaries.com/
+
+```javascript
+const credentials = {
+     id : '********',
+     key : '******************'
+}
+module.exports = credentials;
+```
 
 #### 2. Deploy **Word Finder** 
 
