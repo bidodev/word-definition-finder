@@ -2,7 +2,7 @@ const axios = require('axios');
 const url = require('url');
 
 //import credentials
-const { id, key } = require('../config');
+const { id, key } = require('../../config');
 
 class Search {
   constructor(query, language = 'en-us') {
